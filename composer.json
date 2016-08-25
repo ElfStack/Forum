@@ -1,0 +1,23 @@
+{
+    "name": "elfstack/lib-bbs",
+    "description": "A Bbs Core Lib for you to build a bbs quickly",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tamce",
+            "email": "tamce@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ElfStack\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/database": "^5.3"
+    },
+    "require-dev": {
+        "elfstack/unit-test-lite": "~0.1"
+    }
+}
