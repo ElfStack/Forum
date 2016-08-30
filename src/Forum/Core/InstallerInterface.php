@@ -1,5 +1,5 @@
 <?php
-namespace ElfStack\Bbs\Core;
+namespace ElfStack\Forum\Core;
 
 use Illuminate\Database\Schema\MySqlBuilder;
 

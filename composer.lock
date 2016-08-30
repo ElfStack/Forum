@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "38f9250c412d923548ab558e20448c37",
-    "content-hash": "20522352f1f327491799fba908dd2dbc",
+    "hash": "403a6817083ee3f605d3904af17ab237",
+    "content-hash": "e879204e7c98bd99b8e7342b1e567bca",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -17,7 +17,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/doctrine/inflector/90b2128806bfde671b6952ab8bea493942c1fdae.zip",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
                 "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
                 "shasum": ""
             },
@@ -75,6 +75,39 @@
             "time": "2015-11-06 14:35:42"
         },
         {
+            "name": "elfstack/event",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Tamce/Event.git",
+                "reference": "d334d99e29276674c5cc071209c56586c448d514"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Tamce/Event/zipball/d334d99e29276674c5cc071209c56586c448d514",
+                "reference": "d334d99e29276674c5cc071209c56586c448d514",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ElfStack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tamce",
+                    "email": "tamce@outlook.com"
+                }
+            ],
+            "description": "A simple Event control system.",
+            "time": "2016-08-27 14:36:28"
+        },
+        {
             "name": "illuminate/container",
             "version": "v5.3.0",
             "source": {
@@ -84,7 +117,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/illuminate/container/360f4900dbaa7e76ecfbb58e0ad4b244a90edfe3.zip",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/360f4900dbaa7e76ecfbb58e0ad4b244a90edfe3",
                 "reference": "360f4900dbaa7e76ecfbb58e0ad4b244a90edfe3",
                 "shasum": ""
             },
@@ -127,7 +160,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/illuminate/contracts/f766fc0452d82d545b866a8ad5860b20ccd50763.zip",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/f766fc0452d82d545b866a8ad5860b20ccd50763",
                 "reference": "f766fc0452d82d545b866a8ad5860b20ccd50763",
                 "shasum": ""
             },
@@ -169,7 +202,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/illuminate/database/c480fa98cf754e8c1246dbb2ef693fa1e98c80db.zip",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/c480fa98cf754e8c1246dbb2ef693fa1e98c80db",
                 "reference": "c480fa98cf754e8c1246dbb2ef693fa1e98c80db",
                 "shasum": ""
             },
@@ -221,16 +254,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.3.0",
+            "version": "v5.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "6fe5a61e6af5b928a07aca2f278e4651160996f3"
+                "reference": "1b4f32dfa799dd8d0e0d11e0aaaf677e2829d6e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/illuminate/support/6fe5a61e6af5b928a07aca2f278e4651160996f3.zip",
-                "reference": "6fe5a61e6af5b928a07aca2f278e4651160996f3",
+                "url": "https://packagist.phpcomposer.com/files/illuminate/support/1b4f32dfa799dd8d0e0d11e0aaaf677e2829d6e8.zip",
+                "reference": "1b4f32dfa799dd8d0e0d11e0aaaf677e2829d6e8",
                 "shasum": ""
             },
             "require": {
@@ -274,7 +307,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2016-08-19 12:28:00"
+            "time": "2016-08-26 17:26:49"
         },
         {
             "name": "nesbot/carbon",
@@ -286,7 +319,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/briannesbitt/Carbon/7b08ec6f75791e130012f206e3f7b0e76e18e3d7.zip",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/7b08ec6f75791e130012f206e3f7b0e76e18e3d7",
                 "reference": "7b08ec6f75791e130012f206e3f7b0e76e18e3d7",
                 "shasum": ""
             },
@@ -333,7 +366,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/paragonie/random_compat/088c04e2f261c33bed6ca5245491cfca69195ccf.zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/088c04e2f261c33bed6ca5245491cfca69195ccf",
                 "reference": "088c04e2f261c33bed6ca5245491cfca69195ccf",
                 "shasum": ""
             },
@@ -381,7 +414,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/symfony/polyfill-mbstring/dff51f72b0706335131b00a7f49606168c582594.zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/dff51f72b0706335131b00a7f49606168c582594",
                 "reference": "dff51f72b0706335131b00a7f49606168c582594",
                 "shasum": ""
             },
@@ -440,7 +473,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/symfony/translation/7713ddf81518d0823b027fe74ec390b80f6b6536.zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/7713ddf81518d0823b027fe74ec390b80f6b6536",
                 "reference": "7713ddf81518d0823b027fe74ec390b80f6b6536",
                 "shasum": ""
             },
@@ -506,7 +539,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/ElfStack/unit-test-lite/2d5144fc6bfae905eed91ac88f53aa6b2c470c60.zip",
+                "url": "https://api.github.com/repos/ElfStack/unit-test-lite/zipball/2d5144fc6bfae905eed91ac88f53aa6b2c470c60",
                 "reference": "2d5144fc6bfae905eed91ac88f53aa6b2c470c60",
                 "shasum": ""
             },

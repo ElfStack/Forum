@@ -15,9 +15,10 @@
         }
     },
     "require": {
-        "illuminate/database": "^5.3"
+        "illuminate/database": "^5.3",
+        "elfstack/event": "^0.1.0"
     },
     "require-dev": {
-        "elfstack/unit-test-lite": "~0.1"
+        "elfstack/unit-test-lite": "^0.1.3"
     }
 }

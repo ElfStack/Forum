@@ -2,8 +2,8 @@
 require __DIR__ . '/../../vendor/autoload.php';
 
 use ElfStack\Unit;
-use ElfStack\Bbs;
-use ElfStack\Bbs\Installer;
+use ElfStack\Forum;
+use ElfStack\Forum\Installer;
 
 $unit = new Unit();
 $unit->start('Install Tests Group');
