@@ -5,12 +5,13 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\MySqlBuilder;
 use ElfStack\Forum\Core\InstallerInterface;
+use ElfStack\Forum\Core\RequiredAttrInterface;
 
-class Post extends Model implements InstallerInterface
+class Post extends Model implements InstallerInterface, RequiredAttrInterface
 {
 	protected $table = 'post';
 
-	public static const $requiredAttr = ['title', 'content', 'summary', 'authorId', 'categoryId'];
+	const requiredAttr = ['title', 'content', 'summary', 'authorId', 'categoryId'];
 
 	protected $fillable = self::requiredAttr;
 

@@ -5,12 +5,13 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\MySqlBuilder;
 use ElfStack\Forum\Core\InstallerInterface;
+use ElfStack\Forum\Core\RequiredAttrInterface;
 
-class Group extends Model implements InstallerInterface
+class Group extends Model implements InstallerInterface, RequiredAttrInterface
 {
 	protected $table = 'group';
 
-	public static const $requiredAttr = ['name', 'privilege'];
+	const requiredAttr = ['name', 'privilege'];
 
 	protected $fillable = self::requiredAttr;
 

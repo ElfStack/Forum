@@ -7,6 +7,7 @@ use ElfStack\Forum\Core\Helper;
 
 class User extends Driver
 {
+	public $forum;
 	public function __construct(&$forum)
 	{
 		parent::__construct($forum);

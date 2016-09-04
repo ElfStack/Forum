@@ -1,4 +1,8 @@
 # Forum
+ 测试方法:
+ 把WEB目录指向public文件夹
+ 访问 `domain/install` 执行数据库安装工作
+ <font color=red>注意！数据库安装时如果目标表已经存在则会删除原本表的所有数据，所以请务必检查 `public/include/config.php` 内的数据库配置</font>
 
 ## 事件
 ### login.auth 事件

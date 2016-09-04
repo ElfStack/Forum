@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "403a6817083ee3f605d3904af17ab237",
-    "content-hash": "e879204e7c98bd99b8e7342b1e567bca",
+    "hash": "7b194edac256c568bf2a8377f9a75f51",
+    "content-hash": "7acba5b11e3e4ff6bc869c6b08fb3860",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -106,6 +106,39 @@
             ],
             "description": "A simple Event control system.",
             "time": "2016-08-27 14:36:28"
+        },
+        {
+            "name": "elfstack/router",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElfStack/Router.git",
+                "reference": "4d97aeb9bdfd7127df2fab6a7b3b6785a639958a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElfStack/Router/zipball/4d97aeb9bdfd7127df2fab6a7b3b6785a639958a",
+                "reference": "4d97aeb9bdfd7127df2fab6a7b3b6785a639958a",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ElfStack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tamce",
+                    "email": "tamce@outlook.com"
+                }
+            ],
+            "description": "A very very simple router to help you build your app.",
+            "time": "2016-09-04 15:44:29"
         },
         {
             "name": "illuminate/container",
@@ -262,7 +295,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/illuminate/support/1b4f32dfa799dd8d0e0d11e0aaaf677e2829d6e8.zip",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/1b4f32dfa799dd8d0e0d11e0aaaf677e2829d6e8",
                 "reference": "1b4f32dfa799dd8d0e0d11e0aaaf677e2829d6e8",
                 "shasum": ""
             },

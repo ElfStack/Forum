@@ -2,7 +2,6 @@
 namespace ElfStack\Forum;
 
 use ElfStack\Forum;
-use ElfStack\Forum\Models\User;
 
 class Installer
 {
@@ -17,6 +16,7 @@ class Installer
 		$models = ['User', 'Post', 'Comment', 'Category'];
 		$builder = $this->forum->capsule->schema();
 		foreach ($models as $model) {
+			$model = 'ElfStack\Forum\Models\\' . $model;
 			$model::setUpDatabase($builder);
 		}
 		return $this->forum;

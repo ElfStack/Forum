@@ -16,7 +16,8 @@
     },
     "require": {
         "illuminate/database": "^5.3",
-        "elfstack/event": "^0.1.0"
+        "elfstack/event": "^0.1.0",
+        "elfstack/router": "^0.1.0"
     },
     "require-dev": {
         "elfstack/unit-test-lite": "^0.1.3"

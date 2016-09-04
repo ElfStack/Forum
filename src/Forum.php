@@ -40,7 +40,7 @@ class Forum
 		$this->capsule->bootEloquent();
 
 		// Set up drivers
-		$drivers = isset($config['drivers']) ? $config['drivers'] : ['User'];
+		$drivers = isset($config['drivers']) ? $config['drivers'] : ['User', 'Post'];
 		foreach ($drivers as $driver) {
 			$attr = strtolower($driver);
 			$driver = 'ElfStack\Forum\Drivers\\'.$driver;

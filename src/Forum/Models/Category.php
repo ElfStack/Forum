@@ -5,16 +5,17 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\MySqlBuilder;
 use ElfStack\Forum\Core\InstallerInterface;
+use ElfStack\Forum\Core\RequiredAttrInterface;
 
 class Category extends Model implements InstallerInterface, RequiredAttrInterface
 {
 	protected $table = 'category';
 
-	public static const $requiredAttr = ['title', 'privilege'];
+	const requiredAttr = ['title', 'privilege'];
 
 	protected $fillable = self::requiredAttr;
 
-	protected $casts = ['extra' => 'array'， 'privilege' => 'array'];
+	protected $casts = ['extra' => 'array', 'privilege' => 'array'];
 
 	public function validateAttr()
 	{

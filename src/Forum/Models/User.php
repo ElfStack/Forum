@@ -5,9 +5,10 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\MySqlBuilder;
 use ElfStack\Forum\Core\InstallerInterface;
+use ElfStack\Forum\Core\RequiredAttrInterface;
 use ElfStack\Forum\Core\Helper;
 
-class User extends Model implements InstallerInterface
+class User extends Model implements InstallerInterface, RequiredAttrInterface
 {
 	protected $table = 'user';
 
@@ -15,7 +16,7 @@ class User extends Model implements InstallerInterface
 
 	public static $saltLength = 15;
 
-	public static const $requiredAttr = ['username', 'nick', 'password', 'email'];
+	const requiredAttr = ['username', 'nick', 'password', 'email'];
 
 	protected $fillable = self::requiredAttr;
 
