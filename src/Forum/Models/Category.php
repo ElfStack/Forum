@@ -6,15 +6,25 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\MySqlBuilder;
 use ElfStack\Forum\Core\InstallerInterface;
 
-class Category extends Model implements InstallerInterface
+class Category extends Model implements InstallerInterface, RequiredAttrInterface
 {
 	protected $table = 'category';
 
-	public static const $requiredAttr = ['content', 'authorId', 'postId'];
+	public static const $requiredAttr = ['title', 'privilege'];
 
 	protected $fillable = self::requiredAttr;
 
-	protected $casts = ['extra' => 'array'];
+	protected $casts = ['extra' => 'array'， 'privilege' => 'array'];
+
+	public function validateAttr()
+	{
+		foreach (self::requiredAttr as $key) {
+			if (!isset($this->{$key})) {
+				return false;
+			}
+		}
+		return true;
+	}
 
 	static public function setupDatabase(MySqlBuilder $builder)
 	{
@@ -23,7 +33,7 @@ class Category extends Model implements InstallerInterface
 			$table->increments('id');
 			$table->string('title');
 			$table->text('extra')->nullable();
-			$table->integer('level')->default(0);
+			$table->text('privilege');
 			$table->text('_reserved_')->nullable();
 			$table->text('_reserved2_')->nullable();
 			$table->timestamps();

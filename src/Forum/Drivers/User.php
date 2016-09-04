@@ -3,6 +3,7 @@ namespace ElfStack\Forum\Drivers;
 
 use Exception;
 use ElfStack\Forum\Models\User as MUser;
+use ElfStack\Forum\Core\Helper;
 
 class User extends Driver
 {
@@ -14,24 +15,16 @@ class User extends Driver
 
 	public function all()
 	{
-		return MUser::all();
+		return MUser::all()->toArray();
 	}
 
-	public function create(array $attr, $throws = false)
+	public function create(array $attr, $throws = true)
 	{
-		$user = new MUser;
-		foreach ($attr as $key => $value) {
-			$user->$key = $value;
-		}
-
-		foreach (MUser::requiredAttr as $key) {
-			if (!isset($user->$key)) {
-				throw new Exception("Attribute `$key` is required when create a new user.");
-			}
-		}
+		$user = new MUser($attr);
+		Helper::ensureCanSave($user, $throws);
 		$user->encryptPassword();
 		$user->save();
-		return $user;
+		return $user->toArray();
 	}
 
 	public function login($username, $password)
@@ -64,11 +57,12 @@ class User extends Driver
 		}
 
 		if ($user->auth($password)) {
-			return $user;
+			return $user->toArray();
 		}
 		return false;
 	}
 
+	// 使得使用 current 属性也能完成 current() 函数的功能
 	private $current;
 	public function __get($key) {
 		switch($key)

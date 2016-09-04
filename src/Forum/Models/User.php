@@ -58,6 +58,16 @@ class User extends Model implements InstallerInterface
 		return $this->belongsTo(__NAMESPACE__.'Group', 'groupId');
 	}
 
+	public function validateAttr()
+	{
+		foreach (self::requiredAttr as $key) {
+			if (!isset($this->{$key})) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	static public function setUpDatabase(MySqlBuilder $builder)
 	{
 		$builder->dropIfExists('user');

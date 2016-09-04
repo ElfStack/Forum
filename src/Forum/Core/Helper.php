@@ -12,4 +12,16 @@ class Helper
 		}
 		return $result;
 	}
+
+	static public function ensureCanSave(RequiredAttrInterface $obj, $throws = true)
+	{
+		$result = $obj->validateAttr();
+		if ($result === true) {
+			return true;
+		}
+		if ($throws) {
+			throw new Exception($result);
+		}
+		return $result;
+	}
 }

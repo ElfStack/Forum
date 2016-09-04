@@ -18,6 +18,16 @@ class Post extends Model implements InstallerInterface
 		'privilege' => 'array'
 	];
 
+	public function validateAttr()
+	{
+		foreach (self::requiredAttr as $key) {
+			if (!isset($this->{$key})) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	static public function setupDatabase(MySqlBuilder $builder)
 	{
 		$builder->dropIfExists('post');

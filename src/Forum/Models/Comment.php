@@ -14,6 +14,16 @@ class Comment extends Model implements InstallerInterface
 
 	protected $fillable = self::requiredAttr;
 
+	public function validateAttr()
+	{
+		foreach (self::requiredAttr as $key) {
+			if (!isset($this->{$key})) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	static public function setupDatabase(MySqlBuilder $builder)
 	{
 		$builder->dropIfExists('comment');
