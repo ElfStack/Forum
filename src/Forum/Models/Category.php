@@ -17,11 +17,13 @@ class Category extends Model implements InstallerInterface, RequiredAttrInterfac
 
 	protected $casts = ['extra' => 'array', 'privilege' => 'array'];
 
+	protected $hidden = ['privilege'];
+
 	public function validateAttr()
 	{
 		foreach (self::requiredAttr as $key) {
 			if (!isset($this->{$key})) {
-				return false;
+				return "Key `$key` is required when creating a `Category`.";
 			}
 		}
 		return true;
@@ -38,6 +40,7 @@ class Category extends Model implements InstallerInterface, RequiredAttrInterfac
 			$table->text('_reserved_')->nullable();
 			$table->text('_reserved2_')->nullable();
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

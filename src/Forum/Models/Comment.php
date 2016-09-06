@@ -19,7 +19,7 @@ class Comment extends Model implements InstallerInterface, RequiredAttrInterface
 	{
 		foreach (self::requiredAttr as $key) {
 			if (!isset($this->{$key})) {
-				return false;
+				return "Key `$key` is required when creating a `Comment`.";
 			}
 		}
 		return true;
@@ -37,6 +37,7 @@ class Comment extends Model implements InstallerInterface, RequiredAttrInterface
 			$table->text('_reserved_')->nullable();
 			$table->text('_reserved2_')->nullable();
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

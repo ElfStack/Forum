@@ -1,6 +1,8 @@
 <?php
 namespace ElfStack\Forum\Core;
 
+use Exception;
+
 class Helper
 {
 	static public function random($n, $dic = null)

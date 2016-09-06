@@ -16,7 +16,7 @@ class User extends Driver
 
 	public function all()
 	{
-		return MUser::all()->toArray();
+		return MUser::all();
 	}
 
 	public function create(array $attr, $throws = true)
@@ -25,7 +25,7 @@ class User extends Driver
 		Helper::ensureCanSave($user, $throws);
 		$user->encryptPassword();
 		$user->save();
-		return $user->toArray();
+		return $user;
 	}
 
 	public function login($username, $password)
@@ -58,7 +58,7 @@ class User extends Driver
 		}
 
 		if ($user->auth($password)) {
-			return $user->toArray();
+			return $user;
 		}
 		return false;
 	}

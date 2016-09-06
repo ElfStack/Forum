@@ -23,7 +23,7 @@ class Group extends Model implements InstallerInterface, RequiredAttrInterface
 	{
 		foreach (self::requiredAttr as $key) {
 			if (!isset($this->{$key})) {
-				return false;
+				return "Key `$key` is required when creating a `Group`.";
 			}
 		}
 		return true;
@@ -31,13 +31,14 @@ class Group extends Model implements InstallerInterface, RequiredAttrInterface
 
 	static public function setupDatabase(MySqlBuilder $builder)
 	{
-		$builder->dropIfExists('comment');
-		$builder->create('comment', function ($table) {
+		$builder->dropIfExists('group');
+		$builder->create('group', function ($table) {
 			$table->increments('id');
 			$table->string('name')->unique();
 			$table->text('extra')->nullable();
 			$table->text('_reserved_')->nullable();
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 
